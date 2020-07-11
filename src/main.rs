@@ -8,6 +8,7 @@ use panic_halt;
 use cortex_m_rt as rt;
 use stm32f4xx_hal as hal;
 use hal::prelude::*; // need for the GpioExt trait (-> .split)
+
 #[rt::entry]
 fn main() -> ! {
     if let Some(peripherals) = hal::stm32::Peripherals::take() {
@@ -20,14 +21,14 @@ fn main() -> ! {
 
         let gpioc = peripherals.GPIOC.split();
         let button = gpioc.pc13; // pins are input by default
-		
 
         loop {
-			led.set_high().unwrap();
             // .is_high reads IDR
             if button.is_high().unwrap() {
                 // .set_low uses BSRR
-               led.set_low().unwrap();
+                led.set_low().unwrap();
+            } else {
+                led.set_high().unwrap();
             }
         }
     }

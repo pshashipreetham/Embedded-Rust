@@ -1,5 +1,0 @@
-cargo:rustc-link-lib=static=cortex-m
-cargo:rustc-link-search=/home/admin1/rust-stm32f446-blinky/target/thumbv7em-none-eabihf/release/build/cortex-m-a72cea583faef3e1/out
-cargo:rustc-cfg=cortex_m
-cargo:rustc-cfg=armv7m
-cargo:rustc-cfg=has_fpu
