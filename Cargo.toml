@@ -2,7 +2,7 @@
 name = "rust-stm32f466-blinky"
 version = "0.1.1"
 authors = ["Shashi Preetham <psp316r@gmail.com>"]
-edition = "2020"
+edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
