@@ -1,0 +1,28 @@
+[package]
+name = "rust-stm32f466-blinky1"
+version = "0.1.1"
+authors = ["Shashi Preetham <psp316r@github.com>"]
+edition = "2019"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.5.8"
+cortex-m-rt = "0.6.10"
+panic-halt = "0.2.0"
+stm32f4xx-hal = { version = "0.6.0", features = ["stm32f446"] }
+
+
+
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations
+
+
+[[bin]]
+name = "blinky"
+path = "src/main.rs"
+test = false
+bench = false

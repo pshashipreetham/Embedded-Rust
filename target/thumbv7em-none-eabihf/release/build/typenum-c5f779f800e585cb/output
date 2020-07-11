@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/admin1/rust-stm32f446-blinky/target/thumbv7em-none-eabihf/release/build/typenum-c5f779f800e585cb/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/admin1/rust-stm32f446-blinky/target/thumbv7em-none-eabihf/release/build/typenum-c5f779f800e585cb/out/op.rs
